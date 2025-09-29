@@ -1,0 +1,317 @@
+/* Microsoft Entra Authentication Demo Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+}
+
+header p {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+}
+
+.section {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #3498db;
+}
+
+.section h3 {
+    color: #34495e;
+    margin-bottom: 1rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Configuration Status Section */
+.config-warning {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-left: 4px solid #f39c12;
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+.config-warning h3 {
+    color: #856404;
+    margin-bottom: 1rem;
+}
+
+.config-warning p {
+    color: #856404;
+    margin-bottom: 1rem;
+}
+
+.config-warning code {
+    background: #f8f9fa;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    color: #d63384;
+}
+
+.config-steps {
+    margin-top: 1rem;
+}
+
+.config-steps ol {
+    padding-left: 1.5rem;
+    color: #856404;
+}
+
+.config-steps li {
+    margin-bottom: 0.5rem;
+}
+
+.config-success {
+    background: #d1edff;
+    border: 1px solid #b8daff;
+    border-left: 4px solid #007bff;
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+.config-success h3 {
+    color: #004085;
+    margin-bottom: 0.5rem;
+}
+
+.config-success p {
+    color: #004085;
+    margin: 0;
+}
+
+.config-success code {
+    background: #f8f9fa;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    color: #d63384;
+}
+
+/* Authentication Section */
+.auth-view {
+    text-align: center;
+}
+
+.auth-button {
+    background: #0078d4;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    min-width: 200px;
+}
+
+.auth-button:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.auth-button:disabled:hover {
+    background: #6c757d;
+    transform: none;
+    box-shadow: none;
+}
+
+.auth-button:hover {
+    background: #106ebe;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 120, 212, 0.3);
+}
+
+.auth-button.logout {
+    background: #d13438;
+    margin-top: 1rem;
+}
+
+.auth-button.logout:hover {
+    background: #a80b0e;
+    box-shadow: 0 4px 8px rgba(209, 52, 56, 0.3);
+}
+
+.user-info {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border-left: 4px solid #28a745;
+}
+
+.user-info h3 {
+    color: #155724;
+    margin-bottom: 0.5rem;
+}
+
+.user-info p {
+    color: #6c757d;
+    margin: 0;
+}
+
+/* Claims Section */
+.claims-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.claim-item {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.claim-key {
+    background: #e9ecef;
+    padding: 0.75rem 1rem;
+    font-weight: bold;
+    color: #495057;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.claim-value {
+    padding: 0.75rem 1rem;
+    color: #212529;
+    word-break: break-all;
+    white-space: pre-wrap;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+}
+
+/* Token Section */
+#access-token {
+    width: 100%;
+    min-height: 200px;
+    padding: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    resize: vertical;
+    background: #f8f9fa;
+    color: #495057;
+}
+
+#access-token:focus {
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Error Section */
+.section.error {
+    border-left: 4px solid #dc3545;
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.section.error h3 {
+    color: #721c24;
+}
+
+#error-message {
+    background: #f5c6cb;
+    padding: 1rem;
+    border-radius: 6px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    word-break: break-word;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    header {
+        padding: 1.5rem;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .section {
+        padding: 1.5rem;
+    }
+    
+    .auth-button {
+        min-width: 100%;
+        padding: 15px;
+    }
+    
+    .claims-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 769px) {
+    .claims-grid {
+        grid-template-columns: 1fr 2fr;
+        align-items: start;
+    }
+}
+
+/* Loading Animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Entra Authentication Demo</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Load MSAL.js library first -->
+    <script type="text/javascript" src="https://alcdn.msauth.net/browser/2.35.0/js/msal-browser.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Microsoft Entra Authentication Demo</h1>
+            <p>Authenticate with your Microsoft Entra credentials and view your token claims</p>
+        </header>
+
+        <main>
+            <!-- Configuration Status Section -->
+            <div id="config-status" class="section">
+                <div id="config-warning" class="config-warning hidden">
+                    <h3>⚠️ Configuration Required</h3>
+                    <p>Please create <code>credentials.js</code> from <code>credentials.example.js</code> and add your Azure app registration details.</p>
+                    <div class="config-steps">
+                        <ol>
+                            <li>Copy <code>credentials.example.js</code> to <code>credentials.js</code></li>
+                            <li>Update the clientId and tenantId values in <code>credentials.js</code></li>
+                            <li>Refresh this page</li>
+                        </ol>
+                    </div>
+                </div>
+                <div id="config-success" class="config-success hidden">
+                    <h3>✅ Configuration Loaded</h3>
+                    <p>Credentials successfully loaded from <code>credentials.js</code></p>
+                </div>
+            </div>
+
+            <!-- Authentication Section -->
+            <div id="auth-section" class="section">
+                <div id="login-view" class="auth-view">
+                    <button id="login-button" class="auth-button">Sign in with Entra</button>
+                </div>
+                
+                <div id="authenticated-view" class="auth-view hidden">
+                    <div class="user-info">
+                        <h3>Welcome, <span id="user-name"></span>!</h3>
+                        <p>Email: <span id="user-email"></span></p>
+                    </div>
+                    <button id="logout-button" class="auth-button logout">Sign Out</button>
+                </div>
+            </div>
+
+            <!-- Token Claims Section -->
+            <div id="claims-section" class="section hidden">
+                <h2>ID Token Claims</h2>
+                <div id="claims-container">
+                    <!-- Claims will be populated here -->
+                </div>
+            </div>
+
+            <!-- Access Token Section -->
+            <div id="token-section" class="section hidden">
+                <h2>Access Token</h2>
+                <div id="token-container">
+                    <textarea id="access-token" readonly placeholder="Access token will appear here..."></textarea>
+                </div>
+            </div>
+
+            <!-- Error Section -->
+            <div id="error-section" class="section error hidden">
+                <h3>Authentication Error</h3>
+                <div id="error-message"></div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Load credentials first, then config, then auth -->
+    <script src="credentials.js"></script>
+    <script src="config.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
