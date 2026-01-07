@@ -18,6 +18,7 @@ The tools in this repository are designed to help with Microsoft Entra integrati
 ## Projects
 
 - **EntraDisplayTokenClaims/**: A single-page application that demonstrates Microsoft Entra authentication using MSAL.js, displays token claims, and shows access tokens.
+- **GetLicensedUsers/**: A PowerShell script that retrieves and displays Microsoft Entra license assignments for users. Supports detailed service plan visibility, console output, and CSV export for large-scale audits.
 
 ## Usage
 
