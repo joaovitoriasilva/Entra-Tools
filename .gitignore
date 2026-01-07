@@ -1,5 +1,6 @@
 # Ignore sensitive configuration file
 credentials.js
+users.csv
 
 # Ignore common files
 .DS_Store
